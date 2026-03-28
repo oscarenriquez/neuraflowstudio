@@ -18,10 +18,10 @@ export default async function BlogPage() {
     <Container className="py-24">
       <div className="max-w-2xl">
         <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-500">Blog</p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
           Technical writing for teams building modern software.
         </h1>
-        <p className="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300">
+        <p className="mt-6 text-base leading-8 text-slate-600">
           Notes on architecture, AI implementation, delivery systems, and the engineering decisions behind resilient products.
         </p>
       </div>

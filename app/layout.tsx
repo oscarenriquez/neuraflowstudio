@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import { AnalyticsPlaceholder } from "@/components/analytics-placeholder";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/lib/site";
 
 import "@/app/globals.css";
@@ -47,16 +46,14 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${inter.variable} ${manrope.variable} bg-[var(--background)] font-sans text-[var(--foreground)] antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="relative min-h-screen bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.10),transparent_28%),var(--background)]">
-            <SiteHeader />
-            <main>{children}</main>
-            <SiteFooter />
-            <AnalyticsPlaceholder />
-          </div>
-        </ThemeProvider>
+        <div className="relative min-h-screen bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.12),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.96),rgba(246,248,252,1))]">
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+          <AnalyticsPlaceholder />
+        </div>
       </body>
     </html>
   );

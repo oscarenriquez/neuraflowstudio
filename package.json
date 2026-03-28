@@ -15,10 +15,8 @@
   "dependencies": {
     "clsx": "latest",
     "gray-matter": "latest",
-    "lucide-react": "latest",
     "next": "latest",
     "next-mdx-remote": "latest",
-    "next-themes": "latest",
     "react": "latest",
     "react-dom": "latest",
     "reading-time": "latest",

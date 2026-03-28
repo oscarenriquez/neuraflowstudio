@@ -7,13 +7,13 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-24 sm:py-32">
       <Container className="relative">
-        <div className="absolute inset-x-0 top-0 -z-10 mx-auto h-80 max-w-3xl rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.22),transparent_70%)] blur-3xl" />
+        <div className="absolute inset-x-0 top-4 -z-10 mx-auto h-80 max-w-4xl rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.18),transparent_70%)] blur-3xl" />
         <div className="mx-auto max-w-4xl text-center">
           <Badge>AI + Product Engineering</Badge>
-          <h1 className="mt-8 text-5xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-7xl">
+          <h1 className="mt-8 text-5xl font-semibold tracking-tight text-slate-950 sm:text-7xl">
             AI + Software Development Agency
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
             Build scalable, intelligent systems with a studio that ships automation, modern apps, and resilient cloud platforms.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -25,7 +25,7 @@ export function HeroSection() {
             </Link>
             <Link
               href="/portfolio"
-              className="inline-flex min-w-44 items-center justify-center rounded-full border border-black/10 px-6 py-3 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5 hover:bg-black/[0.03] dark:border-white/10 dark:text-white dark:hover:bg-white/5"
+              className="inline-flex min-w-44 items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-900 transition hover:-translate-y-0.5 hover:bg-slate-50"
             >
               Explore Work
             </Link>

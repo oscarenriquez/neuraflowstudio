@@ -9,7 +9,7 @@ Premium Next.js marketing site and MDX blog for an AI and software agency.
 - Tailwind CSS
 - Local MDX content for the blog
 - ESLint + Prettier
-- Theme toggle with `next-themes`
+- Light-only premium UI system
 
 ## Run locally
 
