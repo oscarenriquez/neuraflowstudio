@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter, Manrope } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { AnalyticsPlaceholder } from "@/components/analytics-placeholder";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/lib/site";
@@ -52,7 +52,7 @@ export default function RootLayout({
           <SiteHeader />
           <main>{children}</main>
           <SiteFooter />
-          <AnalyticsPlaceholder />
+          <Analytics />
         </div>
       </body>
     </html>
