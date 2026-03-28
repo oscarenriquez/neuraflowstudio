@@ -1,0 +1,35 @@
+---
+title: "AI Agents That Actually Ship"
+description: "A practical framework for moving from prototype demos to dependable agent workflows inside production systems."
+date: "2026-03-18"
+tags:
+  - AI Agents
+  - Product Engineering
+  - Automation
+---
+
+Shipping agent features is usually not a model problem. It is a systems problem.
+
+Teams get stuck when they treat the model as the product instead of one component inside the product. Production agents need clear scope, constrained tools, observable state, and a fallback path when the model makes a weak decision.
+
+## Start with bounded tasks
+
+The fastest route to value is giving the agent one narrow responsibility:
+
+- summarize account activity before a sales call
+- draft a support response using approved sources
+- trigger a multi-step internal workflow with guardrails
+
+Each task should have:
+
+1. a measurable success condition
+2. a limited tool set
+3. a human review path where risk is non-trivial
+
+## Add instrumentation before expansion
+
+If you cannot answer why the agent failed, you do not have a product yet. Track prompts, tool calls, latency, model choice, retry counts, and completion quality. That instrumentation becomes the basis for both product iteration and trust.
+
+## Design for operational realism
+
+Reliable systems assume partial failure. Queue work. Persist intermediate state. Rate-limit downstream dependencies. Keep prompts versioned. Once that baseline exists, expanding capabilities becomes controlled engineering instead of fragile experimentation.

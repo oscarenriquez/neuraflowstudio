@@ -1,0 +1,32 @@
+---
+title: "System Design for Fast-Moving Teams"
+description: "The architecture patterns we use to keep shipping velocity high without letting complexity accumulate unchecked."
+date: "2026-03-24"
+tags:
+  - Architecture
+  - Cloud
+  - Delivery
+---
+
+Speed comes from decision quality, not just execution speed.
+
+Fast-moving teams keep a small number of architectural rules and enforce them consistently. That lets product work move quickly without reopening the same infrastructure debate every sprint.
+
+## Prefer seams over cleverness
+
+A scalable codebase makes future change cheap. That usually means:
+
+- route handlers that stay thin
+- domain logic moved into reusable modules
+- shared UI components with explicit variants
+- infrastructure concerns isolated from product flows
+
+When teams skip those seams, every release creates more coupling than value.
+
+## Optimize for operability
+
+A system is only as good as its failure mode. Production-readiness means deciding up front how logging, deployment, caching, secrets, and rollback will work. Those are product concerns because they shape customer experience.
+
+## Keep the stack boring where it matters
+
+Use a modern stack, but avoid novelty in critical paths. Stable frameworks, typed boundaries, and well-understood deployment models free your team to be ambitious in the product layer instead of firefighting the platform.
