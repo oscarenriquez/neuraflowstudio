@@ -1,4 +1,7 @@
 :root {
   --background: #f6f8fc;
   --foreground: #0f172a;
+  --font-sans:
+    "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }

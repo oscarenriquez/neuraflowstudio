@@ -4,6 +4,22 @@ export const siteConfig = {
     "Premium software and AI engineering for brands building intelligent products, automations, and scalable systems.",
   url: "https://neuraflow.studio",
   ctaEmail: "hello@neuraflow.studio",
+  locale: "en-US",
+  authors: [
+    {
+      name: "NeuraFlow Studio",
+      url: "https://neuraflow.studio"
+    }
+  ],
+  keywords: [
+    "AI agency",
+    "software development agency",
+    "AI agents",
+    "automation engineering",
+    "Next.js development",
+    "cloud architecture",
+    "technical content creation"
+  ],
   socialLinks: {
     github: "https://github.com/neuraflowstudio",
     linkedin: "https://www.linkedin.com"

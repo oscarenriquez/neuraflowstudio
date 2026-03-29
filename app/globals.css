@@ -1,11 +1,6 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
 
-@theme inline {
-  --font-sans: var(--font-manrope);
-  --font-body: var(--font-inter);
-}
-
 html {
   scroll-behavior: smooth;
 }

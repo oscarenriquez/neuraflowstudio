@@ -1,17 +1,35 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { StructuredData } from "@/components/structured-data";
 import { Container } from "@/components/ui/container";
-import { portfolioProjects } from "@/lib/site";
+import { absoluteUrl, createMetadata } from "@/lib/seo";
+import { portfolioProjects, siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: "Portfolio",
-  description: "Selected software, AI, and cloud product engagements by NeuraFlow Studio."
-};
+  description: "Selected software, AI, and cloud product engagements by NeuraFlow Studio.",
+  path: "/portfolio",
+  keywords: [...siteConfig.keywords, "software portfolio", "AI case studies"]
+});
 
 export default function PortfolioPage() {
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${siteConfig.name} Portfolio`,
+    itemListElement: portfolioProjects.map((project, index) => ({
+      "@type": "CreativeWork",
+      position: index + 1,
+      name: project.title,
+      description: project.description,
+      image: absoluteUrl(project.image)
+    }))
+  };
+
   return (
     <Container className="py-24">
+      <StructuredData data={portfolioSchema} />
       <div className="max-w-2xl">
         <p className="text-sm font-medium uppercase tracking-[0.28em] text-blue-500">Portfolio</p>
         <h1 className="mt-4 text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
